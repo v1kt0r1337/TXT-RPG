@@ -44,7 +44,7 @@ Most of the code I wrote in the start is now fortunately refurbished and refacto
 
 * Items
 	* Equipable items with multiple item slots. 
-		* 2 Rands slots
+		* 2 Hands slots
 			* Dual wielding and 2-handed weapons is implemented.
 		* 2 Ring slots		
 		* Amulet
