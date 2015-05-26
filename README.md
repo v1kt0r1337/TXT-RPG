@@ -1,5 +1,7 @@
 # TXT RPG
-This project is a framework for a text based roleplaying game.
+This project is ment to be a framework for text based roleplaying game.
+It uses a turn based time system, the character that gets to act first during interaction is the character that rolls the highest initiative score.
+
 The framework is to this day not finished, it still misses some basic functionality.
 The end goal of this framework is to have a very flexible base that can be used to everything between creating a D&D clone to a new text based elderscrolls game!
 
@@ -27,16 +29,23 @@ Most of the code I wrote in the start is now fortunately refurbished and refacto
 	* Use
 	* Quit 
 
-* Flexible attribute system, which can easily by changed and extended on.
-	* Dependant Attributes - These can easily be modified to fit nearly all types of systems.
-		* Initiative, dependent on Dexterity and Intelligence (this can easily modified).
-		* Carry Capacity, dependent on Strength and Vitality  (also easiliy modified).
-	* Allows both permanent buffs, and temporary buffs (and ofc debuffs).
+* Flexible attribute system, which can easily by changed and extended on to fit nearly any system.
+* Base Attributes
+	* Strength
+	* Dexterity
+	* Intelligence
+	* Vitality
+* Dependant Attributes, these are calculated on the values of the Base Attributes
+		* Initiative - dependent on Dexterity and Intelligence.
+		* Carry Capacity - dependent on Strength and Vitality.
+		* Health - dependent on Vitality
+		* Mana - dependent on Intelligence
+* Allows both permanent buffs, and temporary buffs (and ofc debuffs).
 
 * Items
 	* Equipable items with multiple item slots. 
 		* 2 Rands slots
-			* For dual wielding and 2-handed weapons.
+			* Dual wielding and 2-handed weapons is implemented.
 		* 2 Ring slots		
 		* Amulet
 		* Chest
@@ -44,28 +53,28 @@ Most of the code I wrote in the start is now fortunately refurbished and refacto
 		* Gloves 
 		* Pants
 		* Shoulder
-	* Consumeable items, 
+	* Consumeable items 
 
-* Enchanted Items, with a very flexible enchanting system (not ingame enchanting + needs a bit of refactoring).
+* Enchanted Items - with a very flexible enchanting system (not ingame enchanting + needs a bit of refactoring).
   One item can contain multiple of these magical effects at once:	
 	* OnHitMagic - Both permanent and temporary effects.
 	* OnUseMagic - Both permanent and temporary effects.
 	* Passive buffs - Only permanent effects.
 
-* Enemies can be created dynamicly by an factory pattern.
+* Enemies can be created dynamicly by a factory pattern.
 
 
 ### The framework most noticeably lack
 * Leveling-system
 * Currency
 * Merchant/Shop
-* Spellbook-system, there are already spells bound to items, so this shouldn't be too hard to implement.
+* Spellbook-system - there are already spells bound to items, so this shouldn't be too hard to implement.
 * Quest-system.
 * Probably a lot more!
 
   
 ### Not properly integrated yet
-* Armor, atm its just a number.
-* Mana, also just a number due to lack of spells.
+* Armor - atm its just a number.
+* Mana - also just a number due to lack of spells.
 * Probably other things that I cant remember atm!
 
